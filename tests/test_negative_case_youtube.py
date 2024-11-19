@@ -11,8 +11,8 @@ def test_youtube_url_upload():
         page.goto("https://video-converter.com/")
 
         # Attempt to upload a YouTube URL
-        page.fill("#url-input", "https://www.youtube.com/watch?v=aWk2XZ_8IhA")  # Adjust selector
-        page.click("#submit-button")  # Adjust selector
+        page.fill("#open_link", "https://www.youtube.com/watch?v=aWk2XZ_8IhA")  # Adjust selector
+        page.click("#converter > a > div > div")  # Adjust selector
 
         # Validate error message
         error_message = page.text_content("#error-message")  # Adjust selector
